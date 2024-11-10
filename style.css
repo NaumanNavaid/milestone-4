@@ -1,0 +1,174 @@
+/* Reset basic styles */
+body, h2, h3, p, label {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: lightskyblue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #003147;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #02a3d4;
+}
+
+/* Resume container styling */
+.resume-container {
+    margin-top: 40px;
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    clear: both;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+/* Left side (personal and contact info) */
+.resume-container .leftside {
+    background-color: #003147;
+    color: white;
+    padding: 20px;
+}
+
+.resume-container .leftside .image {
+    width: 128px;
+    height: 136px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.resume-container .leftside .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resume-container .leftside h2 {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: normal;
+    cursor: text;
+}
+
+.resume-container .leftside h2 span {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.resume-container .leftside ul {
+    padding: 0;
+    list-style: none;
+}
+
+.resume-container .leftside li {
+    margin: 10px 0;
+}
+
+/* Right side (objective, education, experience, skills) */
+.resume-container .rightside {
+    padding: 20px;
+    background-color: white;
+    color: #333;
+}
+
+.resume-container .rightside h2 {
+    font-size: 25px;
+    color: #003147;
+    margin-bottom: 10px;
+}
+
+.resume-container .rightside .about {
+    margin-bottom: 40px;
+}
+
+.resume-container .rightside .about ul {
+    padding: 0;
+    list-style: none;
+}
+
+.resume-container .rightside .about li {
+    margin-bottom: 10px;
+}
+
+.resume-container .rightside .skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resume-container .rightside .skills li {
+    background-color: #f4f4f4;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.resume-container .rightside .education,
+.resume-container .rightside .experience {
+    margin-bottom: 30px;
+}
+
+.resume-container .rightside .education ul,
+.resume-container .rightside .experience ul {
+    padding: 0;
+    list-style: none;
+}
+
+.resume-container .rightside .education li,
+.resume-container .rightside .experience li {
+    margin-bottom: 10px;
+}
+
+/* Highlight editable fields */
+[contenteditable="true"]:hover {
+    background-color: #f0f0f0;
+    border: 1px dashed #003147;
+}

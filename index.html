@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Styled Resume Builder</title>
+</head>
+<body>
+    <div class="form-container" id="form-container">
+        <h2>Resume Builder</h2>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required><br>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" placeholder="Your Profession" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" placeholder="Your Phone Number" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" placeholder="Your LinkedIn URL" required><br>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" accept="image/*"><br>
+
+            <label for="objective">Objective:</label>
+            <textarea id="objective" placeholder="Write your objective" required></textarea><br>
+
+            <div id="education-fields">
+                <h3>Education:</h3>
+                <button type="button" onclick="addEducation()">Add Education</button>
+                <ul id="education-list"></ul>
+            </div>
+
+            <div id="experience-fields">
+                <h3>Experience:</h3>
+                <button type="button" onclick="addExperience()">Add Experience</button>
+                <ul id="experience-list"></ul>
+            </div>
+
+            <div id="skills-fields">
+                <h3>Skills:</h3>
+                <button type="button" onclick="addSkill()">Add Skill</button>
+                <ul id="skills-list"></ul>
+            </div>
+
+            <button type="submit" onclick="generateResume(event)">Generate Resume</button>
+        </form>
+    </div>
+
+    
+    <div class="resume-container" id="resumeContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
